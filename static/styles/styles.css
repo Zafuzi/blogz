@@ -1,0 +1,86 @@
+body,
+html {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: sans-serif;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    background: #c74c4c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+header a {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    padding: 1em 10px;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column;
+}
+
+.posts {
+    list-style-type: none;
+    width: 100%;
+}
+
+.posts li {
+    width: 100%;
+    padding: 1em 0;
+    border-bottom: 1px solid #eee;
+}
+
+.newpost {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.newpost form {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.newpost label {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.newpost textarea {
+    width: 100%;
+    display: block;
+    clear: both;
+    min-height: 200px;
+}
+
+.warning {
+    color: #c74c4c;
+}

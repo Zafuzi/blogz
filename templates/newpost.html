@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+<div class="newpost">
+    <h1>Make a New Post</h1>
+    <form method='post'>
+        <label>
+        Title:
+        <input type="text" name='title' required />
+        {% if not titleOK %}
+        <span class="warning">
+            Please provide a title
+        </span>
+        {% endif %}
+    </label>
+        <label>
+        Body:
+        <textarea name="body"></textarea>
+    </label>
+        <input type="submit" value='Add Post' required /> {% if not bodyOK %}
+        <span class="warning">
+            Please provide some content
+        </span> {% endif %}
+    </form>
+</div>
+{% endblock %}
