@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+<!-- Check for user session login first  -->
+<div class="profile">
+    <h1> {{username}} </h1>
+    {% if posts|length == 0 %}
+    <p>No posts yet</p>
+    {% else %}
+
+    <ul class="posts">
+        {% for post in posts %}
+        <li>
+            <a href="/post?id={{post['id']}}">
+                <h2>{{post['title']}}</h2>
+            </a>
+            {% if post['private'] == 1 %}
+            <span class="private">private</span> {% endif %}
+            <p>{{post['body'][:100]|safe}}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endif %} {% endblock %}

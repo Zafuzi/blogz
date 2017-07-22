@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
-<div class="newpost">
-    <h1>Make a New Post</h1>
+<div class="formpost">
+    <h1>Make a New Post as {{session['username']}}</h1>
     <form method='post'>
         <label>
         Title:
@@ -15,7 +15,13 @@
         Body:
         <textarea name="body"></textarea>
     </label>
-        <input type="submit" value='Add Post' required /> {% if not bodyOK %}
+        <label class="warning">
+        <div class="private">
+            <div>Make this post public:</div>
+            <input type="checkbox" name="public" checked value="public">
+        </div>
+    </label>
+        <input class="btn" type="submit" value='Add Post' required /> {% if not bodyOK %}
         <span class="warning">
             Please provide some content
         </span> {% endif %}

@@ -10,8 +10,12 @@
 <body>
     <header>
         <nav>
-            <a href="/">Posts</a>
+            <a href="/">All</a> {% if 'username' in session %}
+            <a href="/user">My Posts</a>
             <a href="/newpost">New Post</a>
+            <a href="/logout">Logout</a> {% else %}
+            <a href="/login">Login</a> {% endif %}
+        </nav>
     </header>
     <main>
         {% block content %} {% endblock %}

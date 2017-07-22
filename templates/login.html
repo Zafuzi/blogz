@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block content %}
+<div class="formpost">
+    <form method="post" autocomplete>
+        <label>
+        Username or Email:
+        <input type="username" name="username" placeholder="username" required/>
+    </label>
+        <label>
+        Password: 
+        <input type="password" name="password" required />
+    </label>
+        <span>
+        Need an account?
+        <a href="/register">Register</a>
+    </span>
+        <input class="btn" type="submit" value="Login" />
+    </form>
+</div>
+{% endblock %}
